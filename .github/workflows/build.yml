@@ -11,6 +11,12 @@ on:
     workflows: [Sync branch]
     types:
       - completed
+  workflow_dispatch:
+        inputs:
+          my_input:
+            description: 'Manual run'
+            required: false
+            default: 'default_value'
 
 env:
   # Use docker.io for Docker Hub if empty
